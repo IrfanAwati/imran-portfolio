@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import { MotionConfig } from 'motion/react'
 import { Nav } from './components/Nav'
 import { SmoothScroll } from './components/SmoothScroll'
@@ -26,6 +27,7 @@ export default function App() {
           <Contact />
         </div>
       </main>
+      <Analytics />
     </MotionConfig>
   )
 }
