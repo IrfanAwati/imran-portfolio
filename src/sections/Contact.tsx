@@ -1,5 +1,6 @@
 import { profile } from '../content/profile'
 import { Crown } from '../components/Doodles'
+import { InstagramIcon } from '../components/InstagramIcon'
 import { Reveal } from '../components/motion'
 
 const year = new Date().getFullYear()
@@ -55,6 +56,11 @@ export function Contact() {
                 d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3A1.96 1.96 0 105.3 6.9 1.96 1.96 0 005.25 3zM20.44 13.4c0-3.07-1.64-4.5-3.83-4.5a3.3 3.3 0 00-2.98 1.64V8.5h-3.38V20h3.38v-6.2c0-1.64.31-3.22 2.34-3.22 2 0 2.03 1.87 2.03 3.33V20h3.38l.06-6.6z"
               />
             </svg>
+          </a>
+        </li>
+        <li>
+          <a href={profile.links.instagram} target="_blank" rel="noreferrer" aria-label={`Instagram ${profile.links.instagramHandle}`}>
+            <InstagramIcon />
           </a>
         </li>
         {profile.links.youtube && (

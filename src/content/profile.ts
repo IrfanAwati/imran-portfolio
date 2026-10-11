@@ -23,6 +23,8 @@ export const profile = {
   links: {
     linkedin: 'https://www.linkedin.com/in/imran-awati-3733a6158/',
     youtube: '', // TODO channel URL
+    instagram: 'https://www.instagram.com/imran_pyro/',
+    instagramHandle: '@imran_pyro',
     resume: '',
   },
   images: {
@@ -30,6 +32,8 @@ export const profile = {
     hero: '/img/imran-hero.webp',
     about: '/img/imran-about.webp',
     portrait: '/img/imran-portrait.webp',
+    // real photo from Imran's Instagram; colour/contrast/sharpness enhanced locally, faces untouched
+    uae: '/img/imran-uae.webp',
   },
 }
 

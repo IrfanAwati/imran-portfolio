@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react'
 import { about, life, profile } from '../content/profile'
 import { Crown, Ghost } from '../components/Doodles'
+import { InstagramIcon } from '../components/InstagramIcon'
 import { Reveal } from '../components/motion'
 
 const ICONS: Record<string, string> = {
@@ -64,6 +65,25 @@ export function About() {
       </div>
 
       <div className="life">
+        <Reveal>
+          <figure className="uae-card">
+            <img
+              src={profile.images.uae}
+              alt={`${profile.first} in a black T-shirt giving a thumbs-up among a group of Emirati men in kandura and ghutra (photo from his Instagram)`}
+              loading="lazy"
+            />
+            <figcaption>
+              <span className="uae-tag">
+                <i aria-hidden="true" className="uae-flag" />
+                Life in the UAE
+              </span>
+              <a href={profile.links.instagram} target="_blank" rel="noreferrer" className="ig-link">
+                <InstagramIcon />
+                {profile.links.instagramHandle}
+              </a>
+            </figcaption>
+          </figure>
+        </Reveal>
         <h3 className="life-head">
           Off the <em>clock</em>
         </h3>
