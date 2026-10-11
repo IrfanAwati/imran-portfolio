@@ -43,6 +43,10 @@ export function Hero() {
           ))}
         </motion.ul>
 
+        <motion.p className="hero-intro" {...up(0.33)}>
+          {profile.intro}
+        </motion.p>
+
         <motion.p className="hero-loc" {...up(0.36)}>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 21s-7-6.2-7-11.5a7 7 0 1114 0C19 14.8 12 21 12 21z" />

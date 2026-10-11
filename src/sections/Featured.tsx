@@ -12,7 +12,9 @@ export function Featured() {
       <Reveal className="feat-copy">
         <h2 className="marker-stack" id="featured-title">
           <span>{featured.kicker}</span>
-          <em>{featured.title.join(' ')}</em>
+          {featured.title.map((t) => (
+            <em key={t}>{t}</em>
+          ))}
           <Squiggle className="feat-squiggle" size={120} />
         </h2>
         <p>{featured.text}</p>
@@ -36,10 +38,9 @@ export function Featured() {
           )}
           <div className="feat-overlay">
             <p className="feat-words" aria-hidden="true">
-              <span>Plan.</span>
-              <span>Build.</span>
-              <span>Deliver.</span>
-              <span>Repeat.</span>
+              {featured.words.map((w) => (
+                <span key={w}>{w}</span>
+              ))}
             </p>
             {stats.length > 0 && (
               <ul className="feat-stats">

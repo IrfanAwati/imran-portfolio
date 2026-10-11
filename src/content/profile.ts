@@ -1,18 +1,18 @@
 /**
  * Everything the page says about Imran lives in src/content/.
- * Rule for this site: no invented facts. Career copy comes only from his résumé
- * and LinkedIn; anything still unconfirmed is marked TODO and shows as a placeholder.
+ * Rule for this site: no invented facts. Career copy comes only from his CV
+ * (Imran_Awati_ATS CV, 2026) or what Irfan stated in chat.
  */
 
 export const profile = {
   first: 'Imran',
   last: 'Awati',
-  // three short words shown under the name (role keywords from the résumé)
-  tags: ['TODO role', 'TODO skill', 'TODO domain'] as string[],
+  // shown under the name (CV headline)
+  tags: ['Document Control', 'QA/QC', 'ADNOC EPC'] as string[],
   bubble: "Let's build something great!",
-  heroNote: ['Plan it.', 'Build it.', 'Deliver it.'],
+  heroNote: ['Track it.', 'Check it.', 'Deliver it.'],
   sideScribble: ['Good work', 'speaks', 'for itself.'],
-  intro: 'TODO one-line intro from résumé summary.',
+  intro: '10 years in document control, 7 of them in the UAE and KSA on ADNOC and Aramco EPC projects.',
   // contact details stated by Irfan (2026-10-11)
   location: 'Abu Dhabi, UAE',
   email: 'imranawati1@gmail.com',
@@ -41,7 +41,9 @@ export const about = {
   heading: 'About Imran',
   words: ['Focus', 'Discipline', 'Consistency'],
   paragraphs: [
-    'TODO work paragraph from résumé summary.',
+    // CV professional summary
+    "I'm a document control specialist with 10 years' experience, seven of them in the UAE and KSA on live ADNOC and Aramco EPC packages. Today I'm the single documentation authority across four concurrent ADNOC onshore and offshore projects, and the last quality check on every deliverable before it reaches the client.",
+    "I'm an advanced Aconex and WRENCH user and build my own Excel and Power BI dashboards for document status and overdue tracking. My diploma is in Mechanical Engineering, so I read the drawings, not just the file names.",
     // stated by Irfan for Imran (2026-10-11)
     "Outside work I'm a fitness freak: the gym is part of my routine, and the discipline carries over into everything else. I love to travel, explore new places and try new food wherever I go.",
     "I like being creative and trying new ventures. Lately that means vlogging: I've started a YouTube channel. There aren't many videos yet, but more are on the way.",

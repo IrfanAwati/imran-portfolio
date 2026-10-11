@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from 'motion/react'
 import type { CSSProperties } from 'react'
 import { roles } from '../content/work'
-import { MarkerTitle, Reveal } from '../components/motion'
+import { MarkerTitle } from '../components/motion'
 import { EASE } from '../components/ease'
 
 /** "Our projects" row from the reference → one card per role. Click to expand the highlights. */
@@ -11,11 +11,7 @@ export function Experience() {
     <section className="panel experience" id="experience" aria-labelledby="exp-title">
       <div className="panel-head">
         <MarkerTitle a="My" b="Journey" id="exp-title" />
-        {roles.length > 4 && (
-          <a href="#experience" className="link-arrow small">
-            View all roles <span aria-hidden="true">→</span>
-          </a>
-        )}
+        <p className="panel-note">{roles.length} roles · 2015 – today</p>
       </div>
 
       <ol className="role-grid">
@@ -30,13 +26,14 @@ export function Experience() {
             transition={{ duration: 0.8, ease: EASE, delay: i * 0.08 }}
           >
             <div className="role-cover">
-              {r.image ? <img src={r.image} alt="" loading="lazy" /> : <span className="role-mono">{initials(r.company)}</span>}
+              {r.image ? <img src={r.image} alt="" loading="lazy" /> : <span className="role-mono">{r.short}</span>}
               <span className="role-period">{r.period}</span>
             </div>
             <div className="role-body">
               <h3>{r.company}</h3>
               <p className="role-title">{r.title}</p>
               {r.place && <p className="role-place">{r.place}</p>}
+              {r.context && <p className="role-context">{r.context}</p>}
               {r.points.length > 0 && (
                 <details>
                   <summary>
@@ -53,18 +50,7 @@ export function Experience() {
           </motion.li>
         ))}
       </ol>
-      <Reveal>
-        <span className="sr-only">End of experience list</span>
-      </Reveal>
     </section>
   )
 }
 
-function initials(s: string) {
-  return s
-    .split(/\s+/)
-    .filter((w) => /^[A-Za-z]/.test(w))
-    .slice(0, 2)
-    .map((w) => w[0].toUpperCase())
-    .join('')
-}

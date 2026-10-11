@@ -16,6 +16,7 @@ const MAP = {
   autocad: [si('autocad'), '#E51050'],
   claude: [si('claude'), '#D97757'],
   youtube: [si('youtube'), '#FF0000'],
+  odoo: [si('odoo'), '#E08AD0'],
 }
 
 for (const [slug, [src, fill]] of Object.entries(MAP)) {
