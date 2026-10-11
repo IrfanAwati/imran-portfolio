@@ -26,6 +26,16 @@ export function Contact() {
             <a href={`mailto:${profile.email}`}>{profile.email}</a>
           </li>
         )}
+        {profile.phones.map((p) => (
+          <li key={p.tel}>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2" />
+            </svg>
+            <a href={`tel:${p.tel}`}>
+              <span className="phone-label">{p.label}</span> {p.display}
+            </a>
+          </li>
+        ))}
         <li>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 21s-7-6.2-7-11.5a7 7 0 1114 0C19 14.8 12 21 12 21z" />

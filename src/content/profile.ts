@@ -13,8 +13,13 @@ export const profile = {
   heroNote: ['Plan it.', 'Build it.', 'Deliver it.'],
   sideScribble: ['Good work', 'speaks', 'for itself.'],
   intro: 'TODO one-line intro from résumé summary.',
-  location: 'TODO location',
-  email: '',
+  // contact details stated by Irfan (2026-10-11)
+  location: 'Abu Dhabi, UAE',
+  email: 'imranawati1@gmail.com',
+  phones: [
+    { label: 'UAE', display: '+971 55 544 2703', tel: '+971555442703' },
+    { label: 'India', display: '+91 80882 36837', tel: '+918088236837' },
+  ],
   links: {
     linkedin: 'https://www.linkedin.com/in/imran-awati-3733a6158/',
     youtube: '', // TODO channel URL
